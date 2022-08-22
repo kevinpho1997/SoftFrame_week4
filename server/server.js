@@ -2,6 +2,7 @@ var express = require("express");
 var app = express();
 var http = require('http').Server(app);
 app.use(express.static(__dirname + '/www'));
+import {User} from "./routes/users.ts";
 
 let server = http.listen(3000, function () {
     let host = server.address().address;
@@ -21,4 +22,7 @@ app.get('api/auth', function(req, res) {
 
 app.post('api/auth', function(req, res) {
     console.log("@ Post Auth");
+    user1 = new User("kevinpho", "18/07/1997", 25, "kevin.pho@", "yep");
+    user2 = new User("yeji", "01/01/2000", 22, "yeji@email.com", "nope");
+    user3 = new User("dahyun", "01/01/1998", 24, "dahyun@email.com", "maybe")
 });
