@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import { User } from 'server/routes/users';
+import { User } from 'src/app/class/users';
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
