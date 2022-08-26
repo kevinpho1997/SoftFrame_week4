@@ -2,15 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import { User } from 'src/app/class/users';
+import { AuthService } from '../services/auth.service';
+import { User } from '../class/users';
+
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
-
-import { NgForm } from '@angular/forms';
-// import { Userpwd } from '../userpwd';
-// import { Userobj } from '../userobj';
-// import { USERPWDS } from '../mock-users';
 
 const BACKEND_URL = 'http://localhost:3000';
 
@@ -33,10 +30,6 @@ export class LoginComponent implements OnInit {
   password: string = "";
 
   // week 5
-  user1: User = {username: "kevinpho", birthday: "18/07/1997", age: 25, email: "kevin.pho@email.com", password: "yep", valid: false};
-  user2: User = {username: "yeji", birthday: "01/01/2000", age: 22, email: "yeji@email.com", password: "nope", valid: false};
-  user3: User = {username: "dahyun", birthday: "01/01/1998", age: 24, email: "dahyun@email.com", password: "maybe", valid: false};
-  users = [this.user1, this.user2, this.user3];
   // make a loop and assign values to userpwd and userobj, maybe do this in loginfunc()?
   
 
