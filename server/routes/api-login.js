@@ -1,4 +1,4 @@
-module.exports = function(req, res){
+module.exports = function(app){
     app.post('/api/auth', function(req, res){
         let users = [{"username": "kevin", "birthday": "18/07/1997", "age": 25, "email": "kevin.pho@email.com", "password": "yep"},
         {"username": "yeji", "birthday": "01/01/2000", "age": 22, "email": "yeji@email.com", "password": "nope"},

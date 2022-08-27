@@ -20,6 +20,6 @@ let server = http.listen(3000, function () {
     console.log(`Server listening on port 3000`);
 });
 
-app.post('/login', require('./routes/api-login'));
+app.post(require('./routes/api-login')(app, path));
 
 

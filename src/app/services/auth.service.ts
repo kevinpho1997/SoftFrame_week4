@@ -8,7 +8,7 @@ import { User } from '../class/users';
 export class AuthService {
   username: string;
   password: string;
-  server: string = 'localhost:3000';
+  server: string = 'http://localhost:3000';
 
   constructor(private http:HttpClient) { 
     this.username = "";
