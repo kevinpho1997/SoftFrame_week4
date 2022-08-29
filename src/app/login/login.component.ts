@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
     event.preventDefault();
     this.authservice.loginEvent(this.username, this.password).subscribe(
       data=>{
+        console.log(data);
         if (data.valid == true) {
           this.newUser = new User(data.username, data.birthday, data.age, data.email, data.password)
           sessionStorage.setItem('currentUser', JSON.stringify(this.newUser));

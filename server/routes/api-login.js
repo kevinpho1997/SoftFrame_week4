@@ -13,8 +13,11 @@ module.exports = function(app){
         customer.password = "";
         customer.valid = false;
 
+        console.log("username:", req.body.username);
+        console.log("pw:", req.body.password);
+
         for (let i = 0; i < users.length; i++) {
-            if (req.body.username == users[i].email && req.body.upassword == user[i].password) {
+            if (req.body.username == users[i].username && req.body.password == users[i].password) {
                 customer.username = users[i].username;
                 customer.birthday = users[i].birthday;
                 customer.age = users[i].age;
@@ -23,6 +26,7 @@ module.exports = function(app){
                 customer.valid = true;
             }
         }
+        console.log("customer data:", customer);
         res.send(customer);
     });
 }
