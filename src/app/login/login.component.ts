@@ -17,29 +17,16 @@ const BACKEND_URL = 'http://localhost:3000';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  // week 4
-
   username: string = "";
   birthday: string = "";
   age: number = 0;
   email: string = "";
   password: string = "";
-  errorAlert = "";
   newUser: User = new User();
-
-  // week 5
-  // make a loop and assign values to userpwd and userobj, maybe do this in loginfunc()?
-  
 
   constructor(private route: ActivatedRoute, private router: Router, private httpClient: HttpClient, private authservice: AuthService) { }
 
   ngOnInit(): void {
-    // this.route.paramMap.subscribe(
-    //   params => {this.username = params.get('username')!;} 
-    // );
-    // this.route.paramMap.subscribe(
-    //   params => {this.password = params.get('password')!;} 
-    // );
   }
 
   public loginClicked(event: any) {
@@ -51,7 +38,7 @@ export class LoginComponent implements OnInit {
           sessionStorage.setItem('currentUser', JSON.stringify(this.newUser));
           this.router.navigate(['/account']);
         } else {
-          this.errorAlert = "Login credentials are incorrect";
+          alert("Login credentials are incorrect");
         }
       }
     )

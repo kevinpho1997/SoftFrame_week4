@@ -2,11 +2,12 @@
 const express = require("express");
 const app = express();
 
-// var cors = require('cors');
-// app.use(cors());
+var cors = require('cors');
+app.use(cors());
 
 const path = require('path');
 const http = require('http').Server(app);
+
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));
@@ -20,6 +21,6 @@ let server = http.listen(3000, function () {
     console.log(`Server listening on port 3000`);
 });
 
-app.post(require('./routes/api-login')(app, path));
-
+// app.post('/api/auth', require('./routes/api-login'));
+require('./routes/api-login.js')(app, path);
 
