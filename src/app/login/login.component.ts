@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
       data=>{
         console.log(data);
         if (data.valid == true) {
-          this.newUser = new User(data.username, data.birthday, data.age, data.email, data.password)
+          this.newUser = new User(data.username, data.birthday, data.age, data.email);
           sessionStorage.setItem('currentUser', JSON.stringify(this.newUser));
           this.router.navigate(['/account']);
         } else {
@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
         }
       }
     )
-  }
+  }  
 
   // loginClicked(){
   //   // alert("form submitted");
