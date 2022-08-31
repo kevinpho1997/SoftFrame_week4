@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { AuthService } from '../services/auth.service';
 import { User } from '../class/users';
+import { GetuserService } from '../services/getuser.service';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
