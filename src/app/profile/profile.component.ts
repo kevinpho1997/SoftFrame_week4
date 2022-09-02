@@ -23,15 +23,16 @@ export class ProfileComponent implements OnInit {
   constructor(private getUserService: GetuserService) {}
 
   ngOnInit(): void {
-    // this.getCurrentUser();
-    this.getUserService.observeUser().subscribe((data: any) => {
-      this.currentUserStr = data;
-      console.log("current user:", data);
-    })
+    this.getCurrentUser();
+    // this.getUserService.observeUser().subscribe((data: any) => {
+    //   this.currentUserStr = data;
+    //   console.log("current user:", data);
+    // })
   }
 
   public getCurrentUser() {
-    this.currentUser = JSON.parse(this.currentUserStr);
+    this.currentUser = JSON.parse(this.getUserService.getCurrentUser() || '{}');
+    // this.currentUser = JSON.parse(this.currentUserStr);
     console.log(this.currentUser);
   }
 

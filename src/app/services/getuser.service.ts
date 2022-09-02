@@ -7,6 +7,7 @@ import { User } from '../class/users';
 })
 export class GetuserService {
   // private subject = new Subject<any>();
+
   private storageSub = new Subject();
 
   constructor() {
@@ -17,13 +18,14 @@ export class GetuserService {
     return this.storageSub.asObservable();
   }
 
-  setUser(key: string, data: any) {
-    sessionStorage.setItem(key, data);
-    this.storageSub.next(data);
-  }
+  // setUser(key: string, data: any) {
+  //   sessionStorage.setItem(key, data);
+  //   this.storageSub.next(data);
+  // }
 
   getCurrentUser() {
     return sessionStorage.getItem("currentUser");
+    //     return JSON.parse(sessionStorage.getItem("currentUser"));
   }
   // user(userType: string, objData: any){
   //   this.subject.next({type: userType, data: objData});
