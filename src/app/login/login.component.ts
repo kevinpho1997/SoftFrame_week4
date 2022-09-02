@@ -34,8 +34,8 @@ export class LoginComponent implements OnInit {
     event.preventDefault();
     this.authservice.loginEvent(this.username, this.password).subscribe(
       data=>{
-        console.log(data);
         if (data.valid == true) {
+          console.log(data);
           this.newUser = new User(data.username, data.birthday, data.age, data.email);
           sessionStorage.setItem('currentUser', JSON.stringify(this.newUser));
           this.router.navigate(['/account']);

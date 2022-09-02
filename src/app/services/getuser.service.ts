@@ -27,6 +27,10 @@ export class GetuserService {
     return sessionStorage.getItem("currentUser");
     //     return JSON.parse(sessionStorage.getItem("currentUser"));
   }
+
+  // updateCurrentUser(username: string, birthday: string, age: number, email: string) {
+  //   sessionStorage.setItem()
+  // }
   // user(userType: string, objData: any){
   //   this.subject.next({type: userType, data: objData});
   // }
