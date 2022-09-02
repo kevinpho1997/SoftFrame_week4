@@ -8,15 +8,15 @@ import { User } from '../class/users';
 export class GetuserService {
   // private subject = new Subject<any>();
 
-  private storageSub = new Subject();
+  // private storageSub = new Subject();
 
   constructor() {
 
   }
 
-  observeUser() {
-    return this.storageSub.asObservable();
-  }
+  // observeUser() {
+  //   return this.storageSub.asObservable();
+  // }
 
   // setUser(key: string, data: any) {
   //   sessionStorage.setItem(key, data);
