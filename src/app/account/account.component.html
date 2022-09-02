@@ -1,6 +1,10 @@
 <div class="container">
-    <h1>Accounts Page</h1>
+    <h1>{{userDetails.username}}'s Account</h1>
     <img src="../../assets/Thinking-of-getting-a-cat.png" alt="">
+    <h2>{{userDetails.username}}'s Info</h2>
+    <h3>{{userDetails.age}} yro.</h3>
+    <h3>{{userDetails.username}}'s birthday is: {{userDetails.birthday}}</h3>
+    <h3>You can email {{userDetails.username}} @ {{userDetails.email}}</h3>
     <router-outlet></router-outlet>
 </div>
 

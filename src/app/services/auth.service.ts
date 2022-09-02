@@ -18,4 +18,8 @@ export class AuthService {
   loginEvent(username: string, password: string) {
     return this.http.post<User>(this.server + '/api/auth', {username: username, password: password});
   }
+
+  redirectIfNotLogged() {
+    
+  }
 }
