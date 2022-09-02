@@ -6,6 +6,9 @@ import { User } from '../class/users';
   providedIn: 'root'
 })
 export class AuthService {
+  isLoggedIn = false;
+
+  // http login request
   username: string;
   password: string;
   server: string = 'http://localhost:3000';
@@ -19,7 +22,11 @@ export class AuthService {
     return this.http.post<User>(this.server + '/api/auth', {username: username, password: password});
   }
 
-  redirectIfNotLogged() {
-    
+  login() {
+    this.isLoggedIn = true;
+  }
+
+  logout() {
+    this.isLoggedIn = false;
   }
 }

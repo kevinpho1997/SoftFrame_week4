@@ -38,6 +38,8 @@ export class LoginComponent implements OnInit {
           console.log(data);
           this.newUser = new User(data.username, data.birthday, data.age, data.email);
           sessionStorage.setItem('currentUser', JSON.stringify(this.newUser));
+          // 
+          this.authservice.login();
           this.router.navigate(['/account']);
         } else {
           alert("Login credentials are incorrect");
