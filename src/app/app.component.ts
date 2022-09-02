@@ -9,11 +9,13 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
   title = 'week4tut';
+  ifUserLoggedIn = this.authservice.isLoggedIn;
   constructor(private router: Router, private authservice: AuthService) { }
 
   logoutClicked() {
     sessionStorage.clear();
     this.authservice.isLoggedIn = false;
+    // this.ifUserLoggedIn = false;
     this.router.navigateByUrl('/login');
   }
 
