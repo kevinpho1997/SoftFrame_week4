@@ -30,10 +30,15 @@ export class ProfileComponent implements OnInit {
     // })
   }
 
-  public getCurrentUser() {
+  private getCurrentUser() {
     this.currentUser = JSON.parse(this.getUserService.getCurrentUser() || '{}');
     // this.currentUser = JSON.parse(this.currentUserStr);
     console.log(this.currentUser);
+  }
+
+
+  public updateUser() {
+
   }
 
 }

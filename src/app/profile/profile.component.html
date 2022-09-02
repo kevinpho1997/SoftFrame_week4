@@ -1,2 +1,29 @@
-<p>profile works!</p>
-<button (click)="getCurrentUser()">Test</button>
+<div class="container">
+    <form>
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="email" id="form2Example1" class="form-control" [(ngModel)]="username" name="username"/>
+          <label class="form-label" for="form2Example1">Username</label>
+        </div>
+      
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <input type="password" id="form2Example2" class="form-control" [(ngModel)]="birthday" name="password"/>
+          <label class="form-label" for="form2Example2">Password</label>
+        </div>
+
+        <div class="form-outline mb-4">
+            <input type="password" id="form2Example2" class="form-control" [(ngModel)]="age" name="age"/>
+            <label class="form-label" for="form2Example2">Password</label>
+        </div>
+
+        <div class="form-outline mb-4">
+            <input type="password" id="form2Example2" class="form-control" [(ngModel)]="email" name="email"/>
+            <label class="form-label" for="form2Example2">Password</label>
+        </div>
+      
+        <!-- Submit button -->
+        <button type="button" class="btn btn-primary btn-block mb-4" (click)="updateUser()">Sign in</button>
+    </form>
+</div>   
+<router-outlet></router-outlet>
